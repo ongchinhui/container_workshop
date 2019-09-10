@@ -1,0 +1,275 @@
+    1  dir
+    2  ls -la
+    3  git
+    4  docker
+    5  ls -la
+    6  cd workspace
+    7  ls
+    8  cd
+    9  docker machine
+   10  docker -machine
+   11  docker-machine
+   12  export REGION=sgp1
+   13  export REGION=sgp1
+   14  export SIZE=s-1vcpu-2gb
+   15  export DO_TOKEN=-ca26adfb0e69057da564e99fd795074c71918f3402afdea9bde985d416236e41
+   16  export DO_TOKEN=ca26adfb0e69057da564e99fd795074c71918f3402afdea9bde985d416236e41
+   17  doctl compute region list
+   18  docker-machine create --driver digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size $SIZE --digitalocean-region $REGION dockerbox2
+   19  docker-machine create --driver digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size $SIZE --digitalocean-region $REGION dockerbox2
+   20  docker-machine
+   21  docker-machine ls
+   22  docker-machine create --driver digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size $SIZE --digitalocean-region $REGION dockerbox2
+   23  docker-machine ls
+   24  env
+   25  docker-machine create --driver digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size $SIZE --digitalocean-region $REGION dockerbox2
+   26  docker-machine ls
+   27  env REGION
+   28  env
+   29  docker-machine env dockerbox2
+   30  docker-machine -h
+   31  docker-machine rm --driver digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-region $REGION dockerbox2
+   32  docker-machine rm --driver digitalocean --digitalocean-access-token=$DO_TOKEN  dockerbox2
+   33* docker-machine rm -y --driver digitalocean --digitalocean-access-token=$DO_TOKEN dockerbox2
+   34  docker-machine create --driver digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size $SIZE --digitalocean-region $REGION dockerbox3
+   35  docker-machine env dockerbox2
+   36  docker-machine env dockerbox
+   37  docker-machine ls
+   38  docker-machine env dockerbox3
+   39  docker-machine rm dockerbox2
+   40  docker-machine ls
+   41  docker-machine rm -f dockerbox2
+   42  docker-machine ls
+   43  docker-machine 
+   44  docker-machine rm -f dockerbox3
+   45  docker-machine create --driver digitalocean --digitalocean-access-token=$DO_TOKEN --digitalocean-size $SIZE --digitalocean-region $REGION dockerbox2
+   46  docker run hello-world
+   47  docker-machine env
+   48  docker env
+   49   docker-machine env dockerbox2
+   50  docker version
+   51  docker ps
+   52  docker image ls
+   53  docker image -h
+   54  docker history hello-world
+   55  docker history *
+   56  docker inspect hellow-world
+   57  docker inspect hello-world
+   58  docker-machine ls
+   59  docker-machine env
+   60  docker-machine dockerbox2
+   61  docker-machine env dockerbox2
+   62  docker pull nginx
+   63  docker
+   64  docker image
+   65  docker images
+   66  docker run -p 8001:80 nginx
+   67  docker ps
+   68  docker ps
+   69  docker stop
+   70  docker stop optimistic_nightingale
+   71  docker ps
+   72  docker system prune
+   73  docker run -p 8001:80 nginx
+   74  docker ps
+   75  docker stop exciting_ptolemy
+   76  docker ps
+   77  docker images
+   78  ls
+   79  cd Desktop
+   80  ls
+   81  docker build -t temp .
+   82  ls
+   83  ls ISS*
+   84  cd 'ISS Workshop'
+   85  ls
+   86  docker build -t temp .
+   87  docker build -t temp .
+   88  docker image
+   89  docker images
+   90  docker run -p 8001:80 temp
+   91  docker ps
+   92  docker system prune
+   93  run -d temp
+   94  docker build -t temp .
+   95  docker run -p 8001:80 temp
+   96  docker system prune
+   97  docker run -p 8001:80 temp
+   98  docker system prune
+   99  docker images
+  100  docker ps
+  101  docker rm elated_sinoussi
+  102  docker stop elated_sinoussi
+  103  docker rm elated_sinoussi
+  104  docker system prune
+  105  docker ps
+  106  docker images
+  107  docker run -p 8001:80 temp
+  108  ls
+  109  cat Dockerfile
+  110  docker build -t temp .
+  111  docker images
+  112  docker build -t temp:hi .
+  113  docker images
+  114  docker history temp
+  115  docker run -p 80:80 temp
+  116  docker ps
+  117  docker env
+  118  docker-machine env
+  119  docker-machine env
+  120  docker env
+  121  history
+  122   docker-machine env dockerbox2
+  123  eval $("C:\Program Files\Docker\Docker\Resources\bin\docker-machine.exe" env dockerbox2
+)
+  124  docker ps
+  125  history
+  126   docker build -t temp .
+  127  export h=history
+  128  h
+  129  h
+  130  set h=history
+  131  h
+  132  alias h history
+  133  alias h='history'
+  134  h
+  135    docker images
+  136   docker run -p 80:80 temp
+  137  docker ps
+  138  docker stop nostalgic_meitner
+  139  docker images
+  140  docker pull stackupiss/northwind-db:v1
+  141  docker pull stackupiss/northwind-db:v1
+  142  docker images
+  143  docker run --name mydb  stackupiss/northwind-db:v1
+  144  docker ps
+  145  docker stop mydb
+  146  docker ps
+  147  docker run -d --name mydb  stackupiss/northwind-db:v1
+  148  docker ps
+  149  docker ps
+  150  docker images
+  151  docker ps
+  152  docker run -d --name mydb  stackupiss/northwind-db:v1
+  153  h
+  154  docker ps
+  155  docker run -d --name mydb  stackupiss/northwind-db:v1
+  156  docker images
+  157  docker system prune
+  158  docker run -d --name mydb  stackupiss/northwind-db:v1
+  159  docker ps
+  160  h
+  161  pwd
+  162  docker build -t temp .
+  163   docker run -p 80:80 temp
+  164  docker ps
+  165  docker logs mydb
+  166  docker ps
+  167  docker logs amazing_herschel
+  168  docker volumen ls
+  169  docker volume ls
+  170  docker volumen inspect 4e64fd075a9a2e2c19e202fefeb94759c0b650c6a9aabde6c048697d8071aeb2
+  171  docker volume inspect 4e64fd075a9a2e2c19e202fefeb94759c0b650c6a9aabde6c048697d8071aeb2
+  172  docker volume inspect 781e3e2acc7dd74da9d12c07238aa200b0ccda1c81b5f989199f9b5bce3d45d0
+  173  docker volume create shared
+  174  docker volume ls
+  175  docker volume inspect shared
+  176  docker network ls
+  177  docker network inspect bridge
+  178  docker volume rm shared
+  179  docker volume ls
+  180  git clone https://gitub.com/stackupiss/cfdsa.git
+  181  git clone https://github.com/stackupiss/cfdsa.git
+  182  ls
+  183  ls -la
+  184  LS -LA
+  185  ls -la
+  186  ls -la
+  187  cd cfdsa-master
+  188  dier
+  189  dir
+  190  ls
+  191  cd northwind
+  192  ls -la
+  193  cd server
+  194  ls -la
+  195  pwd
+  196  ls -la
+  197  h
+  198  docker build -t myapp .
+  199  docker images
+  200  docker build -t myapp .
+  201  docker network ls
+  202  docker network create mynet
+  203  docker network ls
+  204  docker network inspect mynet
+  205  h
+  206  docker run -d --network=mynet --name=mydb  stackupiss/northwind-db:v1
+  207  docker ps
+  208  docker stop mydb
+  209  docker run -d --network=mynet --name=mydb  stackupiss/northwind-db:v1
+  210  docker system prune
+  211  docker run -d --network=mynet --name=mydb  stackupiss/northwind-db:v1
+  212  docker ps
+  213  docker network ls
+  214  docker network create mynet
+  215  docker run -d --network=mynet --name=mydb  stackupiss/northwind-db:v1
+  216  docker stop mydb
+  217  docker ps
+  218  docker run -d --network=mynet --name=mydb  stackupiss/northwind-db:v1
+  219  docker system prune
+  220  docker network ls
+  221  docker network create mynet
+  222  docker run -d --network=mynet --name=mydb  stackupiss/northwind-db:v1
+  223  docker ps
+  224  docker stop amazing_herschel
+  225  docker ps
+  226  docker run -d -e DB_USER=root -e DB_PASSWORD=changeit -p 3000:3000 --network=mynet --name=myapp  myapp
+  227  docker network inspect mynet
+  228  h
+  229  docker volume create myvol
+  230  docker ps
+  231  docker stop myapp
+  232  docker stop mydb
+  233  docker run -d --network=mynet --name=mydb --vol==myvol stackupiss/northwind-db:v1
+  234  docker run -d --network=mynet --name=mydb --volume=myvol stackupiss/northwind-db:v1
+  235  docker remove mydb
+  236  docker rm mydb
+  237  docker rm myapp
+  238  docker run -d --network=mynet --name=mydb --volume=myvol stackupiss/northwind-db:v1
+  239  docker run -d -e DB_USER=root -e DB_PASSWORD=changeit -p 3000:3000 --network=mynet --name=myapp  myapp --volume=myvol
+  240  docker ps
+  241  h
+  242  ls -la
+  243  cd ..
+  244  cd ..
+  245  ls -la
+  246  cd ..
+  247  ls
+  248  ls -la
+  249  h
+  250  h >> day1.steps.txt
+  251  ls -la
+  252  more day1.steps.txt
+  253  more
+  254  cat day1.steps.txt
+  255  docker stop myapp
+  256  docker stop mydb
+  257  docker rm mydb
+  258  docker rm myapp
+  259  DOCKER
+  260  docker
+  261  ls
+  262  cd northwind
+  263  ls
+  264  cd cfdsa-master
+  265  ls
+  266  cd northwind
+  267  ls
+  268  docker-compose up -d
+  269  docker ps
+  270  docker-compose down 
+  271  cd ..
+  272  cd ..
+  273  ls -la
+  274  h >> day1.steps.more.txt
