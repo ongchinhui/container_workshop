@@ -48,11 +48,6 @@ spec:
             - name: myapp
               image: stackupiss/northwind-app:v1
               imagePullPolicy: Always
-              resources:
-                requests:
-                    cpu: 100m
-                limits:
-                    cpu: 100m    
               env:
               - name: DB_USER
                 value: root
