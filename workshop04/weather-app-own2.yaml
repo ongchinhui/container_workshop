@@ -1,0 +1,111 @@
+---
+kind: Namespace
+apiVersion: v1
+
+metadata:
+    name: weatherns
+    labels:
+        app: weather-app
+
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+    name: weather-config
+    namespace: weatherns
+    labels:
+        app: weather-app
+
+data:
+    app_default_city: SINGAPORE
+
+---
+kind: Secret
+apiVersion: v1
+metadata:
+    name: weather-secret
+    namespace: weatherns
+    labels:
+        app: weather-app
+
+data:
+    app_id: YjYwZGMyNGYxNzgyNGI1YTc2ODA0MzAxNTdlOTI1ZjE=
+
+---
+kind: Deployment
+apiVersion: apps/v1
+
+metadata:
+    name: weather-deploy
+    namespace: weatherns
+    labels:
+        app: weather-app
+
+spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        name : weather-pod
+    template:
+        metadata:
+            name: weather-pod
+            labels:
+                app: weather-app
+                name: weather-pod
+        spec:
+            containers:
+            - name: weather
+              image: stackupiss/weather:v1
+              imagePullPolicy: Always
+              env:
+              - name: APP_ID
+                valueFrom:
+                    secretKeyRef:
+                        name: weather-secret
+                        key: app_id
+              - name: APP_DEFAULT_CITY
+                valueFrom:
+                    configMapKeyRef:
+                        name: weather-config
+                        key: app_default_city
+              ports:
+              - name: weather-port
+                containerPort: 3000
+              readinessProbe:
+                httpGet:
+                  path: /ready
+                  port: weather-port
+                periodSeconds: 60
+              livenessProbe:
+                httpGet:
+                  path: /health
+                  port: weather-port
+                periodSeconds: 60
+#              resources:
+#                requests:
+#                    cpu: 100m
+#                    memory: 16m             
+    strategy:
+      type: RollingUpdate
+      rollingUpdate:
+        maxSurge: 1
+        maxUnavailable: 1
+
+---
+kind: Service
+apiVersion: v1
+
+metadata:
+    name: weather-svc
+    namespace: weatherns
+    labels:
+        app: weather-svc
+
+spec:
+    type: ClusterIP
+    selector:
+        app: weather-pod
+    ports:
+    - name: weather-svc-port
+      port: 3000
+      targetPort: weather-port
