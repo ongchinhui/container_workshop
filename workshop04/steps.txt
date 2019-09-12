@@ -1,0 +1,30 @@
+Create service for weather app 
+
+  kubectl apply -f weather-app.yaml
+
+Install Istio
+
+  helm ls
+  kubectl create namespace istio-system
+  helm install istio-init --name istio-init  --namespace istio-system
+  kubectl get crd | grep istio.io | wc -l
+  helm install istio --name istio --namespace istio-system  --values istio/values-istio-demo.yaml
+  kubectl get crd
+  kubectl get svc,deployment -n istio-system
+
+Create Istio ingress gateway to route traffic
+  
+  istioctl kube-inject -f weather-app.yaml > weather-app-with-sidecar.yaml
+  kubectl apply -f weather-app-with-sidecar.yaml
+  kubectl get svc,deployment -n weatherns -o wide
+  kubectl exec -ti -n weatherns -c istio_proxy weather-deploy-68c956b96b-wp68l sh
+
+Add Virtual Service and Gateway
+  
+  kubectl apply -f weather-istio.yaml
+  
+Tracing
+
+  kubectl get pod -n istio-system | grep tracing
+  kubectl port-forward -n istio-system pod/istio-tracing-6bbdc67d6c-zxdr7 16686:16686
+  

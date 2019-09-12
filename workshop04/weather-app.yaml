@@ -71,10 +71,9 @@ spec:
               resources:
                 requests:
                     cpu: 100m
-                    memory: 150M
-#                limits:
-#                    cpu: 150m
-#                    memory: 32m
+                    memory: 32M
+                limits:
+                    memory: 128M
 
 ---
 kind: Service
@@ -107,7 +106,7 @@ metadata:
 
 spec:
     rules:
-    - host: weather.onemindistraction1984.com
+    - host: weather.oneminutedistraction1984.com
       http:
         paths:
         -   path: /
